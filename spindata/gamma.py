@@ -143,9 +143,14 @@ gammaListAll["235U"] = -0.52e7#Uranium
 
 def gamma(nucleus):
     """
-    Shortcut function to return the gyromagnetic ratio of the nucleus.
+    Get the gyromagnetic ratio or gamma of a given nucleus.
 
-    The nucleus is specified as a string, e.g. "13C" or "1H".
+    Args:
+        nucleus: String describing the nucleus, e.g. "13C", "1H" or "E" for the electron.
+
+    Returns:
+        Gyromagnetic Ratio as a Float
+
     It is also possible to retrieve the electron gyromagnetic ratio using the argument "E".
     """
     assert nucleus in gammaListAll.keys(), "Nucleus not valid."

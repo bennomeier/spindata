@@ -108,9 +108,13 @@ quadrupoleListAll["235U"] = 493.6e-28 # Uranium
 
 def quadrupole(nucleus):
     """
-    Shortcut function to return the gyromagnetic ratio of the nucleus.
+    Get the quadrupole moment of a nucleus with spin > 1/2.
 
-    The nucleus is specified as a string, e.g. "2H" or "17O".
+    Args:
+        nucleus: String describing the nucleus, e.g. "2H" or "17O".
+
+    Returns:
+        Quadrupole moment encoded as a Float, e.g. 0.5 
     """
     assert nucleus in quadrupoleListAll.keys(), "Nucleus not valid."
     return quadrupoleListAll[nucleus]

@@ -1,4 +1,5 @@
 """ This module contains the total spin for all the nuclei and the electron.
+
 Based on  
 
 R. K. Harris et al., NMR nomenclature. Nuclear spin properties and conventions for chemical shifts(IUPAC Recommendations 2001) 
@@ -137,10 +138,13 @@ spinListAll["235U"] = 7./2 # Uranium
 
 def spin(nucleus):
     """
-    Shortcut function to return the gyromagnetic ratio of the nucleus.
+    Get the spin of a given nucleus.
 
-    The nucleus is specified as a string, e.g. "13C" or "1H".
-    It is also possible to retrieve the electron gyromagnetic ratio using the argument "E".
+    Args:
+        nucleus: String describing the nucleus, e.g. "13C", "1H" or "E" for the electron.
+
+    Returns:
+        Spin encoded as a Float, e.g. 0.5 
     """
     assert nucleus in spinListAll.keys(), "Nucleus not valid."
     return spinListAll[nucleus]
