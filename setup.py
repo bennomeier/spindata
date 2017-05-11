@@ -17,5 +17,9 @@ setup(name='spindata',
       license='MIT',
       packages=['spindata'],
       include_package_data=True,
+            install_requires = [
+          'numpy',
+          'scipy',
+          ],
       zip_safe=False)
 
