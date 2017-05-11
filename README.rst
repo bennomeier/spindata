@@ -14,4 +14,4 @@ Like so::
 
 To calculate the polarization of e.g. electron spins at 6.7 Tesla and 1 Kelvin do
 
-    >>> print(spindata.polarization("E", 6.7, 1) 
+    >>> print(spindata.polarization("E", 6.7, 1)) 
