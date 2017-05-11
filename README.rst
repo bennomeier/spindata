@@ -7,11 +7,11 @@ To access these data call spindata's routines gamma, spin and quadrupole, respec
 
 Like so::
 
-    >>> import spindata
-    >>> print(spindata.gamma("1H"))
-    >>> print(spindata.spin("17O"))
-    >>> print(spindata.quadrupole("17O"))
+>>> import spindata
+>>> print(spindata.gamma("1H"))
+>>> print(spindata.spin("17O"))
+>>> print(spindata.quadrupole("17O"))
 
 To calculate the polarization of e.g. electron spins at 6.7 Tesla and 1 Kelvin do
 
-    >>> print(spindata.polarization("E", 6.7, 1)) 
+>>> print(spindata.polarization("E", 6.7, 1)) 
