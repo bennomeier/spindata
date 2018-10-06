@@ -4,9 +4,11 @@ Spindata
 Spindata provides the gyromagnetic ratio, the spin and the quadrupole moment of all isotopes carrying spin, and the electron.
 
 Spindata is available on PyPi and can be installed as follows:
+
 >>> pip install spindata
 
 Alternatively, download the repository from github and run
+
 >>> python setup.py install
 
 To access these data call spindata's routines gamma, spin and quadrupole, respectively.
