@@ -20,6 +20,13 @@ Like so::
 >>> print(spindata.spin("17O"))
 >>> print(spindata.quadrupole("17O"))
 
-To calculate the polarization of e.g. electron spins at 6.7 Tesla and 1 Kelvin do
+To calculate the thermal equilibrium polarization of e.g. electron spins at 6.7 Tesla and 1 Kelvin do
 
->>> print(spindata.polarization("E", 6.7, 1)) 
+>>> print(spindata.polarization("E", 6.7, 1))
+
+To calculate the thermal equilibrium bulk magnetization (in A/m) of e.g. 15 mM electron spins at 6.7 Tesla and 1 Kelvin do
+
+>>> print(spindata.magnetization("E", 6.7, 1, 15e-3))
+
+This assumes that the Zeeman interaction dominates the Hamiltonian.
+
