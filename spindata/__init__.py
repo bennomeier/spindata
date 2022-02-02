@@ -13,6 +13,6 @@ Written by Benno Meier with contributions from Tobias Lehmann."""
 from .gamma import gamma
 from .spin import spin
 from .quadrupolemoment import quadrupole
-from .polarization import polarization
+from .polarization import polarization, magnetization
 
-__all__ = [gamma, spin, quadrupole, polarization]
+__all__ = [gamma, spin, quadrupole, polarization, magnetization]
