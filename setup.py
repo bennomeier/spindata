@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name='spindata',
-      version='1.13',
+      version='1.14',
       description='Gyromagnetic ratios, spin, and quadrupole moments (where applicable) of all elements and the electron.',
       classifiers=['License :: OSI Approved :: MIT License',
                    'Programming Language :: Python',
