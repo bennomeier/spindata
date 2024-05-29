@@ -16,10 +16,25 @@ def polarization(nucleus, B, T):
     - `T`: Temperature in Kelvin
     """
     g = gamma(nucleus)
+    I = spin(nucleus)
     DE = hbar*g*B
-    
-    polarization = np.tanh(DE/(2*k*T))
+ 
+    if I == 0.5:
+        polarization = np.tanh(DE/(2*k*T))
+    else:
+        Z =  np.sum([np.exp(- hbar*g*B*mz/(k*T)) for mz in list(np.arange(-I, I+1))])
+        mZsum = np.sum([np.exp(hbar*g*B*mz/(k*T))*mz for mz in list(np.arange(-I, I+1))])
+        polarization = 1/I*mZsum/Z
+        
     return polarization
+
+def polarizationToTemperatureAt1T(P,nucleus):
+    g = gamma(nucleus)
+    DE = hbar*g*1
+
+    temperature = DE / (2*np.arctanh(P)*k)
+    return temperature
+    
 
 def magnetization(nucleus, B, T, concentration, unit = "mol"):
     """This function returns the thermal magnetiazation at a given temperature and field.
