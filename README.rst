@@ -24,6 +24,11 @@ To calculate the thermal equilibrium polarization of e.g. electron spins at 6.7 
 
 >>> print(spindata.polarization("E", 6.7, 1))
 
+To calculate the spin temperature for a given polarization of a nucleus at a field of 1 T use
+
+>>> polarizationToTemperatureAt1T(0.7, "1H")
+
+
 To calculate the thermal equilibrium bulk magnetization (in A/m) of e.g. 15 mM electron spins at 6.7 Tesla and 1 Kelvin do
 
 >>> print(spindata.magnetization("E", 6.7, 1, 15e-3))
